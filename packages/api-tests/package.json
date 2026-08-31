@@ -1,0 +1,14 @@
+{
+  "name": "@casa-maiz/api-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Read-only TypeScript API/contract tests for the Casa Maíz Payload CMS REST API, using Playwright Test's request fixture.",
+  "scripts": {
+    "test": "playwright test",
+    "test:debug": "playwright test --debug",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@casa-maiz/shared": "*"
+  }
+}

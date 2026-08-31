@@ -1,0 +1,32 @@
+{
+  "name": "casa-maiz-qa-challenge",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Isolated API/contract and Playwright browser test suites for the Casa Maíz Payload CMS website (challenge deliverable).",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "install:browsers": "playwright install chromium",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test:api": "npm run test -w packages/api-tests",
+    "test:browser": "npm run test -w packages/browser-tests",
+    "test:all": "npm run test:api && npm run test:browser",
+    "report:api": "playwright show-report packages/api-tests/playwright-report",
+    "report:browser": "playwright show-report packages/browser-tests/playwright-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "@types/node": "26.4.0",
+    "@typescript-eslint/eslint-plugin": "8.68.0",
+    "@typescript-eslint/parser": "8.68.0",
+    "dotenv": "17.4.2",
+    "eslint": "10.9.1",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.9.6",
+    "typescript": "5.9.3",
+    "zod": "4.4.3"
+  }
+}

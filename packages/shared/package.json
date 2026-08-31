@@ -1,0 +1,20 @@
+{
+  "name": "@casa-maiz/shared",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Shared contracts, schemas, fixtures, and HTTP client reused by the isolated api-tests and browser-tests packages.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "zod": "4.4.3"
+  },
+  "peerDependencies": {
+    "@playwright/test": "*"
+  }
+}
